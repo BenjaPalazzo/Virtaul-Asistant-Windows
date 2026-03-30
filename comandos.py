@@ -5,19 +5,19 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 import os
 from difflib import get_close_matches
+from dotenv import load_dotenv
+load_dotenv()
 
-# Cohere
 
 
-# API Key de Cohere
+
 
 
 # Spotify
-CLIENT_ID = "00860fe8e5c648a79ddc86f6ae0c8f14"
-CLIENT_SECRET = "eb9475793c584305be9307d2e467e936"
-REDIRECT_URI = "http://127.0.0.1:8888/callback"
-SCOPE = "user-read-playback-state user-modify-playback-state user-read-currently-playing"
-
+CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID")
+CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET")
+REDIRECT_URI = os.getenv("SPOTIFY_REDIRECT_URI", "http://127.0.0.1:8888/callback")
+SCOPE = os.getenv("SPOTIFY_SCOPE")
 # Diccionario de apps para Windows
 APLICACIONES = {
     "discord":      "discord",

@@ -55,12 +55,12 @@ def hablar(texto):
     audio_path = asyncio.run(_hablar_async(texto))
     try:
         import pygame
-
         pygame.mixer.init()
         pygame.mixer.music.load(audio_path)
         pygame.mixer.music.play()
         while pygame.mixer.music.get_busy():
             pygame.time.Clock().tick(10)
+        pygame.mixer.music.unload()  # <- esto libera el archivo
         pygame.mixer.quit()
     except Exception as e:
         print(f"Error reproduciendo audio: {e}")
