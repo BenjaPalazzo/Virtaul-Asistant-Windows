@@ -59,7 +59,7 @@ An intelligent voice assistant developed in Python with speech recognition, home
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/Starks-Industries.git
+git clone https://github.com/BenjaPalazzo/Virtaul-Asistant-Windows.git
 cd Starks-Industries
 ```
 
